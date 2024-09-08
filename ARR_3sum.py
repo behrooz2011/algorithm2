@@ -23,7 +23,7 @@ class Solution(object):
         result = set()  # Use a set to avoid duplicate triplets
         
         for i in range(len(nums) - 2):  # Fix the first number
-            if i > 0 and nums[i] == nums[i - 1]:  # Skip duplicates for the first number
+            if i > 0 and nums[i] == nums[i - 1]:  # Skip duplicates for the first number //not necessary
                 continue
             
             seen = set()  # To track the second number
