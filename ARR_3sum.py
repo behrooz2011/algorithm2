@@ -42,3 +42,23 @@ class Solution(object):
         # print(three_sum([-1, 0, 1, 2, -1, -4]))  # Output: [[-1, -1, 2], [-1, 0, 1]]
         # print(three_sum([0, 1, 1]))  # Output: []
         # print(three_sum([0, 0, 0]))  # Output: [[0, 0, 0]]
+
+
+        ############### Another Solution based on populating k object #########################
+def threeSum(nums):
+    my_set = set()
+    obj ={}
+    for k in range(2,len(nums)):
+        if nums[k] not in obj:
+            obj[nums[k]] = [k]
+        else:
+            obj[nums[k]].append(k)
+    
+    for i in range(len(nums)-2):
+        for j in range(i+1, len(nums)-1):
+            if -(nums[i] + nums[j]) in obj and j < obj[-(nums[i] + nums[j])][-1]:
+                my_set.add(tuple(sorted([nums[i], nums[j], -(nums[i] + nums[j])])))
+    print(my_set)
+    return [list(item) for item in my_set]
+print(threeSum([-1,0,1,2,-1,-4]))
+print(threeSum([3,-2,1,0]))
