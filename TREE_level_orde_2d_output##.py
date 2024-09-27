@@ -56,3 +56,10 @@ class Solution(object):
             result.append(current_level)
         
         return result
+#time complexity o(n): each node is processed once not twice==> outer loop
+""" Outer Loop: The outer loop runs while there are nodes in the queue. 
+This loop iterates over each level of the tree.
+
+Inner Loop: The inner loop iterates over the nodes at the current level.
+ The number of iterations in this loop corresponds 
+to the number of nodes at that level."""
