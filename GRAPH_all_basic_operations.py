@@ -58,7 +58,7 @@ class Graph:
     def get_neighbors(self, vertex):
         return self.adjacency_list.get(vertex, [])
 
-    def dfs_iterative(self, start):
+    def dfs_iterative(self, start): #not quite valid
         visited = set()
         stack = [start]
 
@@ -107,3 +107,5 @@ if __name__ == "__main__":
 
     print("\n\nBFS starting from A:")
     g.bfs('A')
+#dfs does not seem quite valid here 
+# use ~/Graph/DFS_iterative.py instead
